@@ -1780,5 +1780,5 @@ DOOR_HASHES = {
             end
             Citizen.Wait(10000)
         end
-    end)  ]]
+    end)]]--
     
