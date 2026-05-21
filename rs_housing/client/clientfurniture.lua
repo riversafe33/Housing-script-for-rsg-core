@@ -275,7 +275,7 @@ Citizen.CreateThread(function()
                 center.x, center.y, center.z,
                 true
             )
-            local renderRange = (propdata.actionsRange) + 20.0
+            local renderRange = (propdata.actionsRange) + 50.0
 
             if dist <= renderRange then
                 if not spawnedfurniture[propname] then
