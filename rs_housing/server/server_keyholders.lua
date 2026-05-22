@@ -38,10 +38,10 @@ AddEventHandler("rs_housing:server:addPropertyKeyholder", function(propertyId, p
         return
     end
 
-    --if _tsource == _source then
-    --  TriggerClientEvent('rs_housing:ShowAdvancedNotification', _source, Locales['HOUSING_NOTI'], Locales['MENU_KEYHOLDERS_ADD_NEW_TO_SELF'], "menu_textures", "cross", 3000, "COLOR_RED")
-    --  return
-    --end
+    if _tsource == _source then
+      TriggerClientEvent('rs_housing:ShowAdvancedNotification', _source, Locales['HOUSING_NOTI'], Locales['MENU_KEYHOLDERS_ADD_NEW_TO_SELF'], "menu_textures", "cross", 3000, "COLOR_RED")
+      return
+    end
 
     local property   = Properties[propertyId]
     local PlayerData = GetPlayerData(_tsource)
