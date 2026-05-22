@@ -134,6 +134,14 @@ Config.Locations = {
     -- add what you want
 }
 
+-- If any object appears stuck to the ground or sunk into the floor, put it here and add 1.0.
+Config.PropOffset = {
+    ["p_indiandream01x"] = 1.0,
+    ["p_deerantchandelier01x"] = 1.0,
+    ["p_lamp17x"] = 1.0,
+    ["p_lamp03x"] = 1.0,
+}
+
 -- If Config.furnitureitems = true, the furniture shop is enabled and furniture can only be placed if you have the items.
 -- If Config.furnitureitems = false, the shop is disabled and Furniture can only be placed from the house menu.
 Config.furnitureitems = true  
