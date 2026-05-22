@@ -45,14 +45,13 @@ local function IsAuthorized(src, propname, cb)
             if not result or not result[1] then cb(false) return end
 
             local owner      = result[1].citizenid
-            local keyholders = json.decode(result[1].keyholders or '[]') or {}
+            local keyholders = json.decode(result[1].keyholders or '{}') or {}
 
             if owner == citizenid then cb(true) return end
 
-            for _, v in ipairs(keyholders) do
-                if v == citizenid or v.citizenid == citizenid then
-                    cb(true) return
-                end
+            local kh = keyholders[citizenid]
+            if kh and kh.permissions and kh.permissions.place_furniture == 1 then
+                cb(true) return
             end
 
             cb(false)
@@ -92,7 +91,6 @@ AddEventHandler('rs_furniture:server:useitem', function(itemname)
                     label = name,
                     hash  = data.hash,
                     item  = data.item,
-                    -- Sin price: al colocar por item no se cobra dinero
                 }
                 break
             end
@@ -238,7 +236,7 @@ AddEventHandler('rs_furniture:server:place', function(propname, furnitem, furnin
                 y        = py,
                 z        = pz,
                 h        = ph,
-                price    = 0, -- Sin coste cuando es item
+                price    = 0,
             }
             table.insert(furniture, entry)
 
