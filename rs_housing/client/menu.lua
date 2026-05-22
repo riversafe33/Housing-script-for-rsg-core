@@ -831,3 +831,7 @@ CreateThread(function()
         end
     end
 end)
+
+RegisterNetEvent('rs_housing:ShowAdvancedNotification', function(title, subTitle, dict, icon, duration, color)
+    exports['rs_housing']:ShowAdvancedNotification(title, subTitle, dict, icon, duration, color)
+end)
