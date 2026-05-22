@@ -97,7 +97,6 @@ function OpenMenuManagement(propertyId)
             MenuData.CloseAll()
             TaskStandStill(PlayerPedId(), 1)
 
-            DisplayRadar(true)
             PlayerData.IsInMenu = false
 
             CurrentProperty = nil
@@ -182,7 +181,6 @@ function OpenMenuManagement(propertyId)
 
                     TaskStandStill(PlayerPedId(), 1)
 
-                    DisplayRadar(true)
                     PlayerData.IsInMenu = false
 
                     CurrentProperty = nil
@@ -222,7 +220,6 @@ function OpenMenuManagement(propertyId)
     function(data, menu)
         TaskStandStill(PlayerPedId(), 1)
         PlayerData.IsInMenu = false
-        DisplayRadar(true)
         CurrentProperty = nil
         MenuData.CloseAll()
     end)
@@ -267,8 +264,6 @@ function OpenMenuSellProperty()
 
             TaskStandStill(PlayerPedId(), 1)
             PlayerData.IsInMenu = false
-
-            DisplayRadar(true)
 
             CurrentProperty = nil
             MenuData.CloseAll()
@@ -724,8 +719,7 @@ function OpenMenuLedgerHome()
             OpenMenuManagement()
 
         elseif (data.current.value == "deposit") then
-            
-            -- PERMISO NUEVO
+    
             if HasPermissionByName(CurrentProperty, 'ledgerhome_deposit', PlayerData.CitizenId) == 0 then
                 exports.rs_housing:ShowAdvancedNotification( Locales['HOUSING_NOTI'], Locales['INSUFFICIENT_PERMISSIONS'], "menu_textures", "cross", 3000, "COLOR_RED")
                 return
@@ -804,7 +798,6 @@ Citizen.CreateThread(function()
                     PlayerData.IsInMenu = false
                     LocationType        = nil
 
-                    DisplayRadar(true)
                     exports.rs_housing:ShowAdvancedNotification( Locales['HOUSING_NOTI'],   Locales['LOCATION_SET'], "generic_textures", "tick", 3000, "COLOR_GREEN")
 
                     Wait(500)
@@ -831,12 +824,8 @@ CreateThread(function()
         local PlayerData = GetPlayerData()
 
         if PlayerData.IsInMenu then
-
             DisableControlAction(0, 0xCC1075A7, true) -- MWUP
             DisableControlAction(0, 0xFD0F0C2C, true) -- MWDOWN
-
-            DisplayRadar(false)
-
         else
             Wait(1000)
         end
