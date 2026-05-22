@@ -24,6 +24,7 @@ local xx, yy, zz, hh
 local furniturex       = {}
 local furniitems       = {}
 local spawnedfurniture = {}
+local hidePlacementText = false
 
 local function drawtext(str, dx, dy, w, h2, shadow, r, g, b, a, centre)
     local s = CreateVarString(10, "LITERAL_STRING", str, Citizen.ResultAsLong())
@@ -115,9 +116,11 @@ Citizen.CreateThread(function()
             DisableControlAction(0, Config.keysPlace.Cancel,  true)
 
             if not IsInRange() then
-                if not created then
+
+                if not created and not hidePlacementText then
                     drawtext(Locales['FURNITURE_TOO_FAR'],
                         0.15, 0.10, 0.1, 0.3, true, 255, 80, 80, 255, true)
+
                     drawtext(Locales['FOURTOCANCEL'],
                         0.15, 0.13, 0.3, 0.3, true, 255, 255, 255, 255, true)
                 end
@@ -127,24 +130,38 @@ Citizen.CreateThread(function()
                     placedobject   = false
                     created        = false
                     inmenu         = false
-                    if objectxyz then DeleteObject(objectxyz) objectxyz = nil end
+                    hidePlacementText = false
+
+                    if objectxyz then
+                        DeleteObject(objectxyz)
+                        objectxyz = nil
+                    end
                 end
 
             else
-                if not created then
+
+                if not created and not hidePlacementText then
                     drawtext(Locales['GITEMPLACE'],
                         0.15, 0.10, 0.1, 0.3, true, 255, 255, 255, 255, true)
+
                     drawtext(Locales['FOURTOCANCEL'],
                         0.15, 0.13, 0.3, 0.3, true, 255, 255, 255, 255, true)
+
                     drawtext(Locales['USEDMENU'],
                         0.15, 0.16, 0.3, 0.3, true, 255, 255, 255, 255, true)
                 end
 
-                if not HasModelLoaded(furnitem) then RequestModel(furnitem) end
-                while not HasModelLoaded(furnitem) do Citizen.Wait(1) end
+                if not HasModelLoaded(furnitem) then
+                    RequestModel(furnitem)
+                end
+
+                while not HasModelLoaded(furnitem) do
+                    Citizen.Wait(1)
+                end
 
                 if IsDisabledControlJustPressed(0, Config.keysPlace.Create) then
                     if not placedobject then
+
                         local myPed   = PlayerPedId()
                         local pos     = GetEntityCoords(myPed, true)
                         local forward = GetEntityForwardVector(myPed)
@@ -156,6 +173,7 @@ Citizen.CreateThread(function()
                             pos.z,
                             true, true, false
                         )
+
                         PlaceObjectOnGroundProperly(objectxyz)
                         SetEntityAsMissionEntity(objectxyz, true)
                         FreezeEntityPosition(objectxyz, true)
@@ -165,6 +183,7 @@ Citizen.CreateThread(function()
                         created      = true
 
                         local p = GetEntityCoords(objectxyz, true)
+
                         x, y, z = p.x, p.y, p.z
                         h       = GetEntityHeading(objectxyz)
 
@@ -186,21 +205,36 @@ Citizen.CreateThread(function()
 
                     if actionQueue == "confirm" then
                         xx, yy, zz, hh = x, y, z, h
-                        placefurniture  = false
-                        placedobject    = false
-                        created         = false
+
+                        placefurniture = false
+                        placedobject   = false
+                        created        = false
+                        hidePlacementText = false
+
                         DeleteObject(objectxyz)
                         objectxyz = nil
+
                         CloseFurnitureMenu()
+
                         Citizen.Wait(500)
-                        confirmmenu_furniture("confirmfurniturebuy", "buyfurnimenu2")
+
+                        confirmmenu_furniture(
+                            "confirmfurniturebuy",
+                            "buyfurnimenu2"
+                        )
                     end
 
                     if actionQueue == "cancel" then
                         placefurniture = false
                         placedobject   = false
                         created        = false
-                        if objectxyz then DeleteObject(objectxyz) objectxyz = nil end
+                        hidePlacementText = false
+
+                        if objectxyz then
+                            DeleteObject(objectxyz)
+                            objectxyz = nil
+                        end
+
                         CloseFurnitureMenu()
                         inmenu = false
                     end
@@ -217,14 +251,22 @@ Citizen.CreateThread(function()
                     placefurniture = false
                     placedobject   = false
                     created        = false
-                    if objectxyz then DeleteObject(objectxyz) objectxyz = nil end
+                    hidePlacementText = false
+
+                    if objectxyz then
+                        DeleteObject(objectxyz)
+                        objectxyz = nil
+                    end
+
                     CloseFurnitureMenu()
                     inmenu = false
                 end
             end
         end
 
-        if sleep then Citizen.Wait(500) end
+        if sleep then
+            Citizen.Wait(500)
+        end
     end
 end)
 
@@ -275,7 +317,7 @@ Citizen.CreateThread(function()
                 center.x, center.y, center.z,
                 true
             )
-            local renderRange = (propdata.actionsRange) + 50.0
+            local renderRange = (propdata.actionsRange) + 20.0
 
             if dist <= renderRange then
                 if not spawnedfurniture[propname] then
@@ -348,12 +390,48 @@ AddEventHandler('rs_furniture:client:startplace', function(propname, furnidata)
         return
     end
 
-    thefurniitem   = furnidata.item
-    furnitem       = furnidata.hash
-    furniname      = furnidata.label
-    furnitemcost   = 0
-    placefurniture = true
-    inmenu         = false
+    thefurniitem = furnidata.item
+    furnitem     = furnidata.hash
+    furniname    = furnidata.label
+
+    placefurniture   = true
+    inmenu           = false
+    hidePlacementText = true
+
+    local ped = PlayerPedId()
+    local pos = GetEntityCoords(ped)
+    local fwd = GetEntityForwardVector(ped)
+
+    if not HasModelLoaded(furnitem) then
+        RequestModel(furnitem)
+
+        while not HasModelLoaded(furnitem) do
+            Wait(0)
+        end
+    end
+
+    objectxyz = CreateObject(
+        furnitem,
+        pos.x + fwd.x * 2.0,
+        pos.y + fwd.y * 2.0,
+        pos.z,
+        true, true, false
+    )
+
+    PlaceObjectOnGroundProperly(objectxyz)
+    SetEntityAsMissionEntity(objectxyz, true)
+    FreezeEntityPosition(objectxyz, true)
+    SetEntityAlpha(objectxyz, 153)
+
+    placedobject = true
+
+    local p = GetEntityCoords(objectxyz)
+
+    x, y, z = p.x, p.y, p.z
+    h       = GetEntityHeading(objectxyz)
+
+    OpenFurnitureMenu()
+
     FreezeEntityPosition(PlayerPedId(), false)
     ClearPedTasks(PlayerPedId())
 end)
@@ -459,7 +537,6 @@ function furnimenu()
             desc  = Locales['MENU_FURNITURE_SELL_DESC'] .. " " .. sellPercent .. "%" .. " " .. Locales['MENU_FURNITURE_SELL_DESC_2']
         })
     else
-        -- Con furnitureitems: Place es via doble clic en inventario, solo mostramos Retirar
         table.insert(elements, {
             label = Locales['MENU_FURNITURE_REMOVE'],
             value = "removefurni",
@@ -519,7 +596,9 @@ end
 
 function buyfurnimenu2(furnigroup)
     MenuData.CloseAll()
+
     local elements = {}
+
     for k, v in pairs(furnigroup) do
         table.insert(elements, {
             label = k .. " - $" .. v.cost,
@@ -528,34 +607,49 @@ function buyfurnimenu2(furnigroup)
             desc  = "",
         })
     end
-    table.insert(elements, { label = Locales['MENU_BACK'], value = "backup", desc = "" })
+
+    table.insert(elements, {
+        label = Locales['MENU_BACK'],
+        value = "backup",
+        desc  = ""
+    })
 
     MenuData.Open("default", GetCurrentResourceName(), "menuapi",
-        {
-            title    = Locales['MENU_FURNITURE'],
-            subtext  = "",
-            align    = "right",
-            elements = elements,
-        },
-        function(data, menu)
-            if data.current == "backup" or data.current.value == "backup" then
-                buyfurnimenu() return
-            end
-            furnitem       = data.current.value.hash
-            furnitemcost   = data.current.value.cost
-            furniname      = data.current.namee
-            placefurniture = true
-            inmenu         = false
-            local PlayerData = GetPlayerData()
-            PlayerData.IsInMenu = false
-            MenuData.CloseAll()
-            FreezeEntityPosition(PlayerPedId(), false)
-            ClearPedTasks(PlayerPedId())
-        end,
-        function(data, menu)
+    {
+        title    = Locales['MENU_FURNITURE'],
+        subtext  = "",
+        align    = "right",
+        elements = elements,
+    },
+    function(data, menu)
+
+        if data.current == "backup"
+        or data.current.value == "backup" then
             buyfurnimenu()
+            return
         end
-    )
+
+        furnitem       = data.current.value.hash
+        furnitemcost   = data.current.value.cost
+        furniname      = data.current.namee
+
+        placefurniture   = true
+        hidePlacementText = false
+
+        inmenu = false
+
+        local PlayerData = GetPlayerData()
+        PlayerData.IsInMenu = false
+
+        MenuData.CloseAll()
+
+        FreezeEntityPosition(PlayerPedId(), false)
+        ClearPedTasks(PlayerPedId())
+
+    end,
+    function(data, menu)
+        buyfurnimenu()
+    end)
 end
 
 function sellfurnimenu()
