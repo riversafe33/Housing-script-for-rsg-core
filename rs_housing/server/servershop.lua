@@ -1,6 +1,6 @@
 local RSGCore = exports['rsg-core']:GetCoreObject()
 
-RegisterNetEvent('rsg-furniture-shop:server:buyFurniture', function(itemName, itemId, cost, amount)
+RegisterNetEvent('rs_housing:server:buyFurniture', function(itemName, itemId, cost, amount)
     local src = source
     local Player = RSGCore.Functions.GetPlayer(src)
 
@@ -23,7 +23,7 @@ RegisterNetEvent('rsg-furniture-shop:server:buyFurniture', function(itemName, it
     end
 
     if not validItem then
-        TriggerClientEvent('rsg-furniture-shop:client:buyResult', src, false, itemName, 0, amount)
+        TriggerClientEvent('rs_housing:client:buyResult', src, false, 'invalid', itemName, 0, amount)
         return
     end
 
@@ -31,7 +31,13 @@ RegisterNetEvent('rsg-furniture-shop:server:buyFurniture', function(itemName, it
     local playerCash = Player.PlayerData.money['cash']
 
     if not playerCash or playerCash < totalCost then
-        TriggerClientEvent('rsg-furniture-shop:client:buyResult', src, false, itemName, 0, amount)
+        TriggerClientEvent('rs_housing:client:buyResult', src, false, 'money', itemName, 0, amount)
+        return
+    end
+
+    local canAdd = exports['rsg-inventory']:CanAddItem(src, itemId, amount)
+    if not canAdd then
+        TriggerClientEvent('rs_housing:client:buyResult', src, false, 'weight', itemName, 0, amount)
         return
     end
 
@@ -40,9 +46,9 @@ RegisterNetEvent('rsg-furniture-shop:server:buyFurniture', function(itemName, it
     local added = exports['rsg-inventory']:AddItem(src, itemId, amount)
 
     if added then
-        TriggerClientEvent('rsg-furniture-shop:client:buyResult', src, true, itemName, totalCost, amount)
+        TriggerClientEvent('rs_housing:client:buyResult', src, true, 'success', itemName, totalCost, amount)
     else
         Player.Functions.AddMoney('cash', totalCost, 'furniture-shop-refund')
-        TriggerClientEvent('rsg-furniture-shop:client:buyResult', src, false, itemName, 0, amount)
+        TriggerClientEvent('rs_housing:client:buyResult', src, false, 'add', itemName, 0, amount)
     end
 end)
