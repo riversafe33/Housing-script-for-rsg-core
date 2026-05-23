@@ -1,3 +1,9 @@
+# Buy me a beer :beer:  :heart: 
+
+https://ko-fi.com/riversafe33
+
+https://www.paypal.com/donate/?hosted_button_id=NX4ENSGYS6YJN
+
 # Complete property script for rsg-core
 
 1 - Ability to charge taxes to players, monthly or weekly. When enabled in the config, a “Tax Ledger” option will appear in the menu where players can deposit money so their house is not taken away for not paying taxes. To prevent players from depositing large amounts of money and avoiding tax issues for long periods of inactivity, the Tax Ledger will only allow the exact required amount to be deposited each time.
@@ -9,12 +15,6 @@
 4 - Ability for players to buy houses, or for a person with a specific job to act as the seller role. When the sale is confirmed, the script gives that seller a percentage of the house price.
 
 5 - Ability to modify the amount a house gives when it is sold directly from the menu.
-
-# Donations
-
-https://ko-fi.com/riversafe33
-
-https://www.paypal.com/donate/?hosted_button_id=NX4ENSGYS6YJN
 
 # 🎥 Showcase: https://streamable.com/j4rpws
 
