@@ -301,7 +301,6 @@ Config.furniture = {
         ["Cougar Taxidermy"] = { cost = 30, hash = 106531847, item = "furniture_123"},
         ["Vulture Taxidermy"] = { cost = 10, hash = 1751914218, item = "furniture_132"},
         ["Coat Stand"] = { cost = 10, hash = `p_doc_coatstandrack01x`, item = "furniture_141"},
-        ["Christmas Tree"] = { cost = 10, hash = `mp006_p_xmastree01x`, item = "furniture_156"},
         ["Canvas Shade"] = { cost = 10, hash = `p_mptenttanner01x`, item = "furniture_138"},
         ["Hitching Post"] = { cost = 10, hash = `p_hitchingpost01x`, item = "furniture_135"},
         ["Native Basket 1"] = { cost = 10, hash = `p_basketindian02x`, item = "furniture_136"},
