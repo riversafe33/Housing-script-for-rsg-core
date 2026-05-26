@@ -1,9 +1,9 @@
 -- For the wardrobe to work, add this at the very end of rsg-appearance/client/clothes.lua
 
-RegisterNetEvent('rsg-appearance:client:openWardrobe')
-AddEventHandler('rsg-appearance:client:openWardrobe', function()
-    Outfits()
-end)
+    RegisterNetEvent('rsg-appearance:client:openWardrobe')
+    AddEventHandler('rsg-appearance:client:openWardrobe', function()
+        Outfits()
+    end)
 
 -- Job for realestate rsg-core\shared\jobs.lua
 
