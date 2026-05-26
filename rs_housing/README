@@ -7,7 +7,7 @@ end)
 
 -- Job for realestate rsg-core\shared\jobs.lua
 
-realestate = {
+    realestate = {
         name = 'realestate',
         label = 'Realestate',
         type = 'realestate',
