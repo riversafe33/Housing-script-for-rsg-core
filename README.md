@@ -41,7 +41,7 @@ are rendered so players can preview them before purchasing. Items can only be us
 and only if the player is the owner of the house or has a house key and has been granted permission by the owner to place furniture 🔨📦
 
 # ⚠️ **Important:**
-You must replace the entire script, including the SQL file.
+# You must replace the entire script, including the SQL file.
 
 # For the wardrobe to work, add this at the very end of rsg-appearance/client/clothes.lua
 
