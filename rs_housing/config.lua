@@ -318,7 +318,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2388.472167, -1216.280151, 46.159191,2388.82), -- Purchase prompt position
             SecondaryExit   = vector4(0,0,0, 0),                                     -- Only applies if the house uses teleportation, coordinates where you appear when exiting the house
             MenuActions     = vector3(2379.97, -1215.13, 47.17),                     -- Menu position to manage the house
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false, -- Set to true if the house uses teleportation
         doors = { 
@@ -378,7 +378,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-255.700, 741.5248, 117.46, 295.30194091797), 
             SecondaryExit   = vector4(-258.198, 735.8474, 117.48, 121.615913391), 
             MenuActions     = vector3(-259.524, 738.9733, 118.18), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = true,
         doors = { },
@@ -396,7 +396,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2988.195, 2193.384, 165.74, 77.14215087890), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2990.161, 2188.243, 166.78), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -430,7 +430,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(3024.494, 1776.168, 83.179, 167.34350585938), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(3032.382, 1779.709, 84.132), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -456,7 +456,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2628.726, 1693.783, 116.53, 281.05822753906), 
             SecondaryExit   = vector4(0,0,0, 0),
             MenuActions     = vector3(2626.739, 1691.679, 115.68), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -482,7 +482,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1980.718, 1195.169, 170.96, 56.607650756836), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1980.667, 1191.524, 171.40), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -509,7 +509,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(1867.114, 587.8313, 113.92), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -536,7 +536,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(2540.678, 697.8855, 80.745), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -562,7 +562,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2717.219, 707.5354, 79.155, 200.75015258789), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2715.924, 711.2705, 79.522), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -588,7 +588,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2819.894, 278.9041, 50.963, 45.582988739014), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2825.767, 277.375, 48.097), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -621,7 +621,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2238.014, -141.476, 47.603, 318.75), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2238.590, -144.447, 47.628), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -654,7 +654,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1792.581, -83.7813, 56.757, 267.1276245117), 
             SecondaryExit   = vector4(0,0,0, 0),
             MenuActions     = vector3(1782.195, -85.1265, 56.806), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -701,7 +701,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1626.832, -366.809, 75.875, 189.87915039063), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1619.316, -362.713, 75.897), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -728,7 +728,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1376.122, -872.619, 70.134, 291.44378662109), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1368.778, -870.906, 70.127), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -761,7 +761,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1114.282, -1305.71, 66.441, 197.2032623291), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1112.957, -1299.03, 66.405), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -794,7 +794,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1323.161, -2279.58, 50.549, 314.59680175781), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1316.033, -2276.89, 50.518), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -827,7 +827,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1890.716, -1857.69, 43.119, 54.802825927734), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1897.826, -1870.64, 43.131), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -891,7 +891,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(2368.999, -864.116, 43.022), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -924,7 +924,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2069.167, -856.503, 43.345, 181.81117248535), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2071.174, -855.104, 43.356), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -973,7 +973,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1384.784, -2085.87, 52.600, 113.59962463379), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1392.500, -2084.44, 52.565), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1006,7 +1006,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(347.3879, -666.815, 42.786, 245.91331481934), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(340.2781, -667.204, 42.810), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1040,7 +1040,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-64.3675, -394.268, 72.241, 300.0), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-63.6798, -392.288, 72.215), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1066,7 +1066,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-818.110, 350.5407, 98.111, 172.503417968), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-813.138, 355.7528, 98.082), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1099,7 +1099,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(899.7727, 265.5565, 116.03, 4.6019735336304), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(902.2537, 263.6886, 115.99), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1125,7 +1125,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1117.264, 485.8627, 97.267, 230.1255035), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1120.418, 492.5742, 97.284), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1159,7 +1159,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(1889.801, 304.8412, 77.055), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1192,7 +1192,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(779.4117, 849.1409, 118.93, 283.232391357), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(779.9094, 844.0106, 118.90), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1225,7 +1225,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(223.4083, 990.6601, 190.92, 351.51095581), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(225.1354, 987.8232, 190.88), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1258,7 +1258,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-67.4751, 1234.961, 170.80, 127.624343872), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-65.7959, 1238.299, 170.77), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1285,7 +1285,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(-615.878, -23.6280, 85.971), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1318,7 +1318,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-692.252, 1042.355, 135.03, 141.36312866), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-690.022, 1041.475, 135.00), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1344,7 +1344,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-1815.23, 654.1401, 131.79, 216.274505615), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-1818.33, 661.9285, 131.87), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1370,7 +1370,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-2459.92, 836.6832, 142.37, 182.5136871), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-2461.02, 839.9203, 146.37), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1396,7 +1396,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-557.320, 2698.416, 320.25, 154.9732208252), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-554.636, 2698.816, 320.42), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1429,7 +1429,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(-1976.16, -1664.80, 118.03, 324.55331420), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(-1977.87, -1670.06, 118.17), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1456,7 +1456,7 @@ Config.Properties = {
             SecondaryExit   = vector4(0,0,0, 0), 
            
             MenuActions     = vector3(-2374.80, -1589.28, 154.28), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1482,7 +1482,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1011.0451, -1759.6350, 47.6051, 179.4546), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(1021.4477, -1775.3131, 47.5808), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1632,7 +1632,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(2401.4912, -1096.9491, 47.4204, 2.6667), 
             SecondaryExit   = vector4(0,0,0, 0), 
             MenuActions     = vector3(2393.6597, -1084.1970, 52.4369), 
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
@@ -1808,7 +1808,7 @@ Config.Properties = {
             PrimaryEntrance = vector4(1932.972, 1949.702, 266.07, 23.494300842285), 
             SecondaryExit   = vector4(0,0,0, 0),
             MenuActions     = vector3(1935.05, 1948.20, 266.10),
-            ActionDistance  = 1.2, -- Don´t touch
+            ActionDistance  = 1.8, -- Don´t touch
         },
         hasTeleportationEntrance = false,
         doors = { 
