@@ -163,6 +163,7 @@ Locales = {
     ["MENU_FURNITURE_SELL_DESC"]                   = "Sell your furniture for",
     ["MENU_FURNITURE_SELL_DESC_2"]                 = "of the original value",
     ["DOORLOCK"]                                   = "Lock",
+    ["DOORUNLOCK"]                                 = "Unlock",
     ["HOUSE"]                                      = "House",
     ["YOU_BOUGTH"]                                 = "You bought",
     ["FURNI_NOTI"]                                 = "Furniture",
